@@ -252,6 +252,7 @@ main section{
     max-width: 500px;
     min-height: 500px;
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.19);
+    margin-bottom: 50px;
 }
 
 
@@ -664,28 +665,108 @@ footer p{
 
 .grid-3-items{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     border-radius: 0.8125rem;
     box-shadow: 0 0.3125rem 2.8125rem #e7f0ff;
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .one-grid{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 130px;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .one-grid i{
     font-size: 2.5rem;
     color: var(--light-green-color);
+    padding: 0.5em;
 }
 
 .one-grid p{
     font-size: 1.2rem;
     line-height: 2rem;
+    font-weight: 500;
+    padding: 0 0.5em 1em 0.5em;
+    text-align: center;
+}
 
+.one-grid:first-child::after,
+.one-grid:nth-child(2)::after{
+    content: "";
+    position: absolute;
+    background-color: #e9f1ff;
+    height: calc(100% - 2rem);
+    width: 0.125rem;
+    right: 0;
+
+}
+
+/*** OFFER-2 ***/
+
+.references-row-fve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.text-box p{
+    text-align: center;
+}
+
+.offer-2{
+    margin-top: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.offer-col-2{
+    outline: 2px solid transparent;
+    border-radius: 10px;
+    max-width: 400px;
+    min-height: 500px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.19);
+    margin-bottom: 50px;
+}
+
+
+.offer-col-2 h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark-green-color);
+    line-height: 2rem;
+}
+
+.offer-col-2 p{
+    padding: 10% 10%;
+    max-height: 130px;
+    margin-bottom: 65px;
+}
+
+.outline-2{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 150px;
+    position: relative;
+}
+
+.outline-2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--light-green-color);
+    bottom: 0;
+    left: 0;
 }
